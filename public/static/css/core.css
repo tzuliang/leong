@@ -1,0 +1,91 @@
+﻿@charset "utf-8";
+/*---- all ----*/
+.wrapper { width:100%; height:100%; background:#ececec }
+.content { width:960px; margin:0 auto; }
+
+/*---- header ----*/
+.header { height:130px; color:#565656; }
+.logo { width:166px; height:55px; float:left; margin-top:51.5px; }
+.nav { float:right; margin-top:68px; }
+.nav li { float:left; width:85px; text-align:center; line-height:15px; margin-left:20px; }
+.nav li i { color:#a7a7a7; font-size:10px; margin:auto 10px auto 10px;}
+
+/*---- banner ----*/
+.banner { height:370px; background:url(../images/banner.jpg) center; }
+.contact_banner { height:320px; background:url(../images/banner_contact.jpg) center; }
+.service_banner { height:200px; background:url(../images/banner_service.jpg) center; }
+.case_banner {height:180px; background:url(../images/banner_case.jpg) center;  }
+.about_banner { height:300px; width:100%; position:relative; overflow:hidden;}
+.intro { margin:130px auto; text-align:center;}
+.intro h1 { font-size: 48px; font-weight:100; color:#fff; font-family:"Microsoft YaHei UI", "微软雅黑", "幼圆"; font-style:italic;}
+.intro p { margin: 5px 0 0  0;  font-size: 14px; color:#fff; }
+
+/*---- main ----*/
+.main { width:900px; margin:0 auto auto auto;}
+
+.main_bg_01 { height:259px; background:url(../images/main_bg_01.jpg);}
+.main_bg_01 .service_icon { float:left; margin-top:55px; }
+.main_bg_01 .service_icon li { width:260px; float:left; text-align:right; margin:auto 18px auto 22px;}
+.main_bg_02 { height:390px;}
+.main_bg_02 .index_case li { width:285px; height:170px; background:url(../images/index_case_bg.jpg); float:left; margin:15px 5px auto 5px; }
+.main_bg_02 .index_case li img { width:250px; height:125px; margin:17px 17px auto 17px; }
+.main_bg_03 { height:258px; background:url(../images/main_bg_02.jpg); margin-bottom:65px;}
+.main_bg_03 .index_news { float:right; margin:105px 25px auto auto;}
+.main_bg_03 .index_news li { width:295px; height:25px; font-size:13px; line-height:25px; }
+.main_bg_03 .index_news li a { float:left; }
+.main_bg_03 .index_news li span { float:right; }
+
+/*---- case ----*/
+.case { margin: 30px auto; display:inline-block; overflow: auto;}
+.case li { width:280px; height:190px; background: #ffffff; float:left; margin:20px 7px 20px 7px; text-align: center; }
+.case li img {  width:250px; height:125px; margin:17px 15px 0 15px;  }
+.case li span { height: 20px; font-size: 13px;}
+
+/*---- service ----*/
+.service_title_1 { height: 25px; width: 335px; background:url(../images/service_title_1.jpg); margin:50px auto 35px 0; }
+.service_title_2 { height: 25px; width: 395px; background:url(../images/service_title_2.jpg); margin:50px auto 35px 0; }
+.service_list { margin-left: 30px; width: 840px; }
+.service_list li { height: 115px; margin:45px auto 45px;  list-style-type: none;}
+.service_list li img { float: left; }
+.service_list li span { width: 700px; float:right; font-size: 14px; line-height: 25px; color: #555555;}
+.service_list li span h3 { font-size: 24px; line-height: 45px; font-weight:normal; color: #222222;}
+.technology_icon { margin:35px 30px; width: 840px; height: 85px; }
+.technology_icon li { float: left; margin: auto 30px;}
+
+/*---- contact ----*/
+.contact_bg_01 { height:405px; background:url(../images/contact_bg_01.jpg); }
+.contact_bg_01 .contact_infor { width: 840px; height:200px; margin: 60px 30px auto 30px; position:absolute; }
+.contact_bg_01 .contact_infor li { font-family:"Microsoft YaHei UI", "微软雅黑", "幼圆"; font-size:14px; height:33px;}
+.contact_bg_01 .contact_infor li img { margin-left:50px; float:left;}
+.contact_bg_01 .contact_infor li P { height:35px; margin-top:2px;}
+.contact_bg_02 { height:300px; }
+.contact_bg_02 .message_box { width: 840px; height:200px; margin: 10px 30px auto 30px; position:absolute; }
+.contact_bg_02 .message_box li { float:left; margin:10px 10px auto 10px; }
+.contact_bg_02 .message_box li input { font-family: Tahoma,"微软雅黑","黑体"; font-size: 13px; border: 1px solid #fff; height: 30px; line-height: 30px; padding-left: 5px; box-shadow: 1px 1px 2px #7f807f; -webkit-box-shadow: 1px 1px 2px #7f807f; -moz-box-shadow: 1px 1px 2px #7f807f; }
+.contact_bg_02 .message_box li #message_title { width:300px; }
+.contact_bg_02 .message_box li #message_name,#message_code{ width:130px; }
+.contact_bg_02 .message_box li #message_email{ width:200px; }
+.contact_bg_02 .message_box li #message_content { vertical-align:text-top; width:763px; line-height: 20px; font-family: Tahoma,"微软雅黑","黑体"; font-size: 13px; border: 1px solid #fff; box-shadow: 1px 1px 2px #7f807f; -webkit-box-shadow: 1px 1px 2px #7f807f; -moz-box-shadow: 1px 1px 2px #7f807f; resize:none; }
+
+/*---- about ----*/
+.about_list { margin:30px auto 45px auto; }
+.about_list li { float:left; width:280px; margin-right:30px; }
+.about_list li h4 { font-size:16px; line-height:1.25; font-weight:600; margin-bottom:20px;}
+.about_list li p { font-size:13px; line-height:24px; margin-bottom:25px; color: #000000; }
+.about_list .last { margin-right: 0px;}
+
+/*---- page ----*/
+.page_body { width: 780px; float: right; margin: 30px auto 50px; display:inline-block; overflow: auto; }
+.page_body h1 {font-weight: 400; line-height: 1.25; margin-bottom: 15px;}
+.page_meta { width: 160px; font-size: 12px; color: #878787; float: left; margin: 30px 18px 0 0; text-align: right; float: right;}
+.page_meta ul li a {color: #959393; display: inline-block; font-style: italic;}
+.page_meta ul li span { font-weight: 700; font-style:normal;}
+.post-format { background-color: #ddd; background-image: url(../images/icon-post-formats.png); background-repeat: no-repeat; background-position: 0 0; color: #959393; cursor: pointer; display: block; height: 33px; margin: 0 0 10px 0; text-align: left; text-indent: -9999px; width: 33px; background-position: -199px 0;}
+a:hover > .post-format { background-color: #0c6fa2; color: #0c6fa2;}
+
+
+/*---- footer ----*/
+.footer{ width:100%; height:150px; background:#494948; color:#F4F4F4; font-size:9px; line-height:20px; padding-top:40px; }
+.footer .info { float:left; margin:auto auto auto 10px; }
+.footer .links { float:right; margin:auto 10px auto auto;} 
+.footer .links a {color:#F4F4F4;}

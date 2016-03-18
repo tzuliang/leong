@@ -1,0 +1,44 @@
+{include file="public/header"}
+<div class="content">
+    <div class="page_body">
+        <h1>{$title}</h1>
+        <div>{$body}<br/></div>
+        <p>
+            <strong>转载请注明文章来源：</strong>
+            <a href="{:U('/announcement/'.$id)}" title="{$title}" rel="bookmark">{:U('/announcement/'.$id)}</a><br/>
+        </p>
+    </div>
+    <div class="page_meta">
+        <ul>
+            <li>
+                <a href="{:U('/announcement/'.$id)}" title="Permalink to {$title}" rel="bookmark">
+                    <span class="post-format aside">Permalink</span>
+                </a>
+            </li>
+            <li>
+                <span>Type:</span>
+                <a href="#" rel="type">{$name}</a>
+            </li>           
+            <li>
+                <span>Posted:</span>
+                <a href="#" title="Created: {$creationdate|date="h:i:sa",###}" rel="bookmark">
+                    <time datetime="{$creationdate|date="Y-m-d h:i:sa",###}">{$creationdate|date="F d y",###}</time>
+                </a>
+            </li>
+            <li>
+                <span>Tags:</span>
+                <a href="#" rel="tag">官网</a>,
+                <a href="#" rel="tag">测试</a>
+            </li>
+            <li>
+                <span>Pageviews:</span>
+                <a title="Comment on {$title}" href="{:U('/announcement/'.$id)}">{$hits}</a>
+            </li>
+            <li>
+                <span>Comments:</span>
+                <a title="Comment on {$title}" href="{:U('/announcement/'.$id)}">{$postnum}</a>
+            </li>
+        </ul>
+    </div>       
+</div>
+{include file="public/footer"}

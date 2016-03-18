@@ -1,0 +1,3 @@
+<?php
+//000000000000a:4:{s:6:"fields";a:5:{i:0;s:2:"id";i:1;s:4:"name";i:2;s:8:"seoTitle";i:3;s:10:"seoKeyword";i:4;s:7:"seoDesc";}s:4:"bind";a:5:{s:2:"id";i:1;s:4:"name";i:2;s:8:"seoTitle";i:2;s:10:"seoKeyword";i:2;s:7:"seoDesc";i:2;}s:4:"type";a:5:{s:2:"id";s:15:"int(3) unsigned";s:4:"name";s:11:"varchar(99)";s:8:"seoTitle";s:11:"varchar(99)";s:10:"seoKeyword";s:11:"varchar(99)";s:7:"seoDesc";s:12:"varchar(255)";}s:2:"pk";s:2:"id";}
+?>

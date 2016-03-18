@@ -1,0 +1,152 @@
+{include file="public/header"}
+    <!-- libraries -->
+    <link href="__STATIC__/admin/css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet" />
+    <link href="__STATIC__/admin/css/lib/uniform.default.css" type="text/css" rel="stylesheet" />
+    <link href="__STATIC__/admin/css/lib/select2.css" type="text/css" rel="stylesheet" />
+    <link href="__STATIC__/admin/css/lib/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet" />
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__STATIC__/admin/css/compiled/form-showcase.css" type="text/css" media="screen" />
+	
+    <!-- main container -->
+    <div class="content">
+        <!-- settings changer -->
+        <div class="skins-nav">
+            <a href="#" class="skin first_nav selected">
+                <span class="icon"></span><span class="text">默认模式</span>
+            </a>
+            <a href="#" class="skin second_nav" data-file="__STATIC__/admin/css/skins/dark.css">
+                <span class="icon"></span><span class="text">夜间模式</span>
+            </a>
+        </div>
+
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="form-page">
+                <div class="row-fluid form-wrapper">
+                    <!-- left column -->
+                    <form action="{:U('content/save','id='.$id)}" method="post">
+                    <div class="span8 column">
+                        
+                            <div class="field-box">
+                                <label>标题:</label>
+                                <input name="title" class="span9 inline-input" placeholder="请输入新标题" maxlength="90" type="text" value="{$title}" />
+                            </div>
+                            <div class="field-box">
+                                <label>属性:</label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="featured" value="1" {$featured ?= 'checked'} />头条
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="sticky" value="1" {$sticky ?= 'checked'} />置顶
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="promoted" value="1" {$promoted ?= 'checked'} />推荐
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="bold" value="1" {$bold ?= 'checked'} />加粗
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="skip" value="1" {$skip ?= 'checked'} />转跳
+                                </label>
+                            </div>
+                            <div class="field-box">
+                                <label>作者:</label>
+                                <input name="authorid" class="span3 inline-input" placeholder="作者名称" maxlength="20" type="text" value="{$authorid}" /> 
+                                <label>来源:</label>
+                                <input name="source" class="span4 inline-input" placeholder="内容来源" maxlength="80" type="text" value="{$source}"/>
+                            </div>
+                            <div class="field-box">
+                                <label>来源URL:</label>
+                                <input name="sourceurl" class="span9 inline-input" placeholder="请输入来源URL" maxlength="90" type="text" value="{$sourceurl}" />
+                            </div>
+                            <div class="field-box">
+                                <script id="container" name="body" type="text/plain">
+                                    {$body}
+                                </script>
+                            </div>
+                    
+                        <!-- 配置文件 -->
+                        <script type="text/javascript" src="__STATIC__/ueditor/ueditor.config.js"></script>
+                        <!-- 编辑器源码文件 -->
+                        <script type="text/javascript" src="__STATIC__/ueditor/ueditor.all.js"></script>
+                        <!-- 实例化编辑器 -->
+                        <script type="text/javascript">var editor = UE.getEditor('container');</script>  
+                    </div>
+                    <!-- right column -->
+                    <div class="span4 column pull-right">
+                        
+                            <div class="field-box">
+                                <label>状态:</label>
+                                <label class="radio">公开<input name="status" type="radio" value="published" {$status=='published' ?= 'checked'} /></label>
+                                <label class="radio">私密<input name="status" type="radio" value="unpublished" {$status=='unpublished' ?= 'checked'} /></label>
+                            </div>
+                            <div class="field-box">
+                                <label>发布时间:</label>
+                                <input name="creationdate" type="text" value="{$creationdate|date="yy-m-d h:i:s",###}" class="input-large datetimepicker" />
+                            </div>
+                            <div class="field-box">
+                                <label>分类:</label>
+                                <div class="ui-select">
+                                    <select name="categoryid">
+                                        <option value="1" {$categoryid=='1' ?= 'selected'} />Announcement
+                                        <option value="2" {$categoryid=='2' ?= 'selected'} />Dynamic
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field-box">
+                                <label>标签:</label>
+                                <input class="span6" type="text"  placeholder="请用英文逗号或空格隔开标签" />
+                            </div>
+                            <div class="field-box">
+                                <label>转向链接:</label>
+                                <input class="span6" type="text"  placeholder="请输入转向URL" />
+                            </div>
+                            <div class="field-box">
+                                <input class="btn-flat" type="submit" value="完成编辑，提交数据">
+                            </div>
+                    
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__STATIC__/admin/js/wysihtml5-0.3.0.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="__STATIC__/admin/js/bootstrap.min.js"></script>
+    <script src="__STATIC__/admin/js/bootstrap-wysihtml5-0.0.2.js"></script>
+    <script src="__STATIC__/admin/js/bootstrap.datetimepicker.js"></script>
+    <script src="__STATIC__/admin/js/jquery.uniform.min.js"></script>
+    <script src="__STATIC__/admin/js/select2.min.js"></script>
+    <script src="__STATIC__/admin/js/theme.js"></script>
+    <!-- call this page plugins -->
+    <script type="text/javascript">
+        $(function () {
+
+            // add uniform plugin styles to html elements
+            $("input:checkbox, input:radio").uniform();
+
+            // select2 plugin for select elements
+            $(".select2").select2({
+                placeholder: "选择分类"
+            });
+
+            // datetimepicker plugin
+            
+            $('.datetimepicker').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                todayBtn: "linked"
+            }).on('changeDate', function (ev) {
+                
+                $(this).datetimepicker('hide');
+            });
+
+            // wysihtml5 plugin on textarea
+            $(".wysihtml5").wysihtml5({
+                "font-styles": false
+            });
+        });
+    </script>
+
+</body>
+</html>

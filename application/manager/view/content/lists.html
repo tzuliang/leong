@@ -1,0 +1,127 @@
+{include file="public/header"}
+	<!-- main container -->
+    <div class="content">
+        <!-- settings changer -->
+        <div class="skins-nav">
+            <a href="#" class="skin first_nav selected">
+                <span class="icon"></span><span class="text">默认模式</span>
+            </a>
+            <a href="#" class="skin second_nav" data-file="__STATIC__/admin/css/skins/dark.css">
+                <span class="icon"></span><span class="text">夜间模式</span>
+            </a>
+        </div>
+
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="users-list">
+                <div class="row-fluid header">
+                    <h3>内容 Content</h3>
+                    <div class="span10 pull-right">
+                        <input type="text" class="span5 search" placeholder="Type a user's name..." />
+                        
+                        <!-- custom popup filter -->
+                        <!-- styles are located in css/elements.css -->
+                        <!-- script that enables this dropdown is located in js/theme.js -->
+                        <div class="ui-dropdown">
+                            <div class="head" data-toggle="tooltip" title="选择类型">
+                                筛选内容
+                                <i class="arrow-down"></i>
+                            </div>  
+                            <div class="dialog">
+                                <div class="pointer">
+                                    <div class="arrow"></div>
+                                    <div class="arrow_border"></div>
+                                </div>
+                                <div class="body">
+                                    <p class="title">检索内容:</p>
+                                    <div class="form">
+                                        <select>
+                                            <option />标题
+                                            <option />类别
+                                            <option />编号
+                                            <option />Signed up
+                                            <option />Last seen
+                                        </select>
+                                        <select>
+                                            <option />等于
+                                            <option />不等于
+                                            <option />is greater than
+                                            <option />starts with
+                                            <option />contains
+                                        </select>
+                                        <input type="text" />
+                                        <a class="btn-flat small">Add filter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="{:U('content/add')}" class="btn-flat success pull-right">
+                            <span>&#43;</span>
+                            新内容 
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Users table -->
+                <div class="row-fluid table">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="span1 sortable">
+                                    编号
+                                </th>
+                                <th class="span1 sortable">
+                                    <span class="line"></span>类别
+                                </th>
+                                <th class="span5 sortable">
+                                    <span class="line"></span>标题
+                                </th>
+                                <th class="span1 sortable">
+                                    <span class="line"></span>浏览
+                                </th>
+                                <th class="span1 sortable">
+                                    <span class="line"></span>作者
+                                </th>
+                                <th class="span2 sortable">
+                                    <span class="line"></span>更新时间
+                                </th>
+                                <th class="span2 sortable align-right">
+                                    <span class="line"></span>操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row -->
+                            {foreach name="data" id="v" }
+                            <tr>
+                                <td>{$v.id}</td>
+                                <td>{$v.name}</td>
+                                <td><a href="#">{$v.title}</a></td>
+                                <td>0</td>
+                                <td><a href="#">Jero</a></td>
+                                <td>{$v.creationdate|date="Y-m-j G:i:s",###}</td>
+                                <td class="align-right">
+                                    <a class="btn-flat" href="{:U('content/edit','id='.$v.id)}">修改</a>
+                                    <a class="btn-flat danger" href="#">删除</a>
+                                </td>
+                            </tr>
+                            {/foreach}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination pull-right">
+                    <ul>
+                        <li><a href="#">&#8249;</a></li>
+                        <li><a class="active" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&#8250;</a></li>
+                    </ul>
+                </div>
+                <!-- end users table -->
+            </div>
+        </div>
+    </div>
+{include file="public/footer"}

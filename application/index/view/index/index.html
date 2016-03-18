@@ -1,0 +1,31 @@
+{include file="public/header"}
+<div class="banner content"></div>
+<div class="content">
+    <div class="main">
+        <div class="main_bg_01">
+            <ul class="service_icon">
+                <li><a href="#"><img src="__STATIC__/images/service_01.jpg" alt="尚辰网络的网站建设服务"/></a></li>
+                <li><a href="#"><img src="__STATIC__/images/service_02.jpg" alt="尚辰网络的交互设计服务"/></a></li>
+                <li><a href="#"><img src="__STATIC__/images/service_03.jpg" alt="尚辰网络的网络门户服务"/></a></li>
+            </ul>
+        </div>
+        <div class="main_bg_02">
+            <ul class="index_case">
+                <li><a href="#"><img src="__STATIC__/images/case01.jpg" /></a></li>
+                <li><a href="#"><img src="__STATIC__/images/case02.jpg" /></a></li>
+                <li><a href="http://www.ibchina.com/"><img src="__STATIC__/images/case03.jpg" /></a></li>
+                <li><a href="http://jiuye.szpt.edu.cn/"><img src="__STATIC__/images/case04.jpg" /></a></li>
+                <li><a href="#"><img src="__STATIC__/images/case05.jpg" /></a></li>
+                <li><a href="http://dudao.szpt.edu.cn/"><img src="__STATIC__/images/case06.jpg" /></a></li>
+            </ul>
+        </div>
+        <div class="main_bg_03">
+            <ul class="index_news">
+            {foreach name="announcement" id="v" }
+                <li><a href="{:U('/announcement/'.$v.id)}">{$v.title}</a><span>{$v.creationdate|date="y-m-d",###}</span></li>
+            {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>
+{include file="public/footer"}

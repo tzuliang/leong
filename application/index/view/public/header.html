@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$title ?= $title.' - '}尚辰网络 Sunchange{$Think.CONTROLLER_NAME=='index' ?= ' | 深圳市尚辰网络科技有限公司'}</title>
+<meta name="KeyWords" content="尚辰,尚辰网络,深圳市尚辰网络科技有限公司,尚辰设计,尚辰创业,网站建设,界面交互,企业建站,sunchange">
+<meta name="description" content="深圳市尚辰网络科技有限公司成立于2013年3月，是一家年轻、充满梦想的互联网创业创新型企业，尚辰网络致力提供优质网络服务和优质网站建设。尚辰网络的理念是：尊重用户核心体验。">
+<meta name="author" content="深圳市尚辰网络科技有限公司">
+<meta name="DC.Language" content="zh-CN">
+<link href="__STATIC__/css/base.css" rel="stylesheet" type="text/css">
+<link href="__STATIC__/css/core.css" rel="stylesheet" type="text/css">
+<script src="__STATIC__/js/jquery-1.8.2.min.js"></script>
+<script src="__STATIC__/js/jquery.MyFloatingBg.js"></script>
+</head>
+<body>
+<div class="wrapper">
+        <!--Header-->
+        <div class="header content">
+            <div class="logo"><a href="__ROOT__"><img src="__ROOT__/static/images/logo.jpg" alt="尚辰网络"></a></div>
+            <ul class="nav">
+                <li><a href="__ROOT__">尚辰网络</a><i>Home</i></li>
+                <li><a href="{:U('/service')}">服务项目</a><i>Service</i></li>
+                <li><a href="{:U('/projects')}">项目案例</a><i>Projects</i></li>
+                <li><a href="{:U('/about')}">关于尚辰</a><i>About</i></li>
+                <li><a href="{:U('/contact')}">联系我们</a><i>Contact</i></li>
+            </ul>
+        </div>

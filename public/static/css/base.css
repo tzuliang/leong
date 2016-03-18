@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+/*
+==========================================================================================
+ 对浏览器默认样式进行重置，以保证所有浏览器统一。
+==========================================================================================
+*/
+* { padding: 0; margin: 0; }
+ul,ol { list-style: none; }
+a { text-decoration: none; }
+img { border: 0 none; }
+table { border-spacing: 0; border-collapse: collapse; }
+
+/*
+==========================================================================================
+ 当前网站的基本设置
+==========================================================================================
+*/
+html { height: 100%; font-size: 14px; line-height: 30px; font-family: Arial, sans-serif; color: #333; background: #fff; font-family: "Microsoft Yahei", "Microsoft YaHei UI", "微软雅黑",SimHei,Helvetica; }
+body { position: relative; }
+a { color: #333; }
+a:hover { color: #0c6fa2 !important; }
+a:visited { color: #333; }
+::selection { background: #0c6fa2; color: #fff; text-shadow: none; }
+
+/*
+==========================================================================================
+ 常用样式，无兼容问题
+==========================================================================================
+*/
+/*浮动*/
+.ku_fix { zoom: 1; }
+.ku_fix:after { display: block; content: ""; height: 0; clear: both; overflow: hidden; visibility: hidden; }
+.clear { clear: both; }
